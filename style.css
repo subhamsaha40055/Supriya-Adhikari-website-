@@ -14,7 +14,7 @@ body {
 
 /* Home Section */
 #home {
-    height: 100vh;
+    height: 125vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +26,7 @@ body {
 
 .intro {
     position: relative;
+
 }
 
 .profile-pic {
@@ -91,12 +92,12 @@ body {
 }
 
 .home-buttons .btn {
-    padding: 10px 20px;
+    padding: 10px 60px;
     border: 2px solid #007bff;
     border-radius: 5px;
     color: #007bff;
     text-decoration: none;
-    margin: 10px;
+    
     display: inline-block;
     transition: background-color 0.5s, color 0.5s;
 }
@@ -343,20 +344,23 @@ section {
 }
 
 section:hover {
+    
     transform: scale(1.02); /* Slight scale-up effect */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+    box-shadow: 0 4px 25px #09c3fbde; /* Add shadow effect on hover */
+    background-color: #1a1a1a;
+    
 }
 
 
 
 /* Qualifications Section Hover */
 #qualifications:hover {
-    background-color: #292929; /* Change background slightly */
+    background-color: #1a1a1a; /* Change background slightly */
 }
 
 /* Experience Section Hover */
 #experience:hover {
-    background-color: #292929; /* Darkening effect */
+    background-color: #1a1a1a; /* Darkening effect */
 }
 
 /* Contact Section Hover */
@@ -381,17 +385,12 @@ section:hover {
 }
 
 .profile-pic:hover {
-    transform: scale(1.05); /* Slight scale effect on profile picture hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow for emphasis */
+    transform: scale(2.05); /* Slight scale effect on profile picture hover */
+    box-shadow: 0 40px 100px rgba(216, 221, 225, 0.3); /* Add shadow for emphasis */
 }
 
 
-/* Global Styles for Section Animations */
-section {
-    opacity: 0;
-    transform: translateY(20px); /* Initial position for sliding effect */
-    animation: fadeInUp 1s forwards; /* Fade-in and slide-up animation */
-}
+
 
 /* Animations for each section with delays */
 #home {
@@ -414,43 +413,7 @@ section {
     animation-delay: 2.5s;
 }
 
-/* Keyframes for Fade-In and Slide-Up Animation */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px); /* Starts 20px below */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Ends in original position */
-    }
-}
 
-/* Additional Hover Animation */
-section:hover {
-    transform: scale(1.02); /* Slight scale-up effect on hover */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
-}
-
-
-
-/* Zoom-In Keyframes for Profile Picture */
-@keyframes zoomIn {
-    0% {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* Buttons Animation */
-.home-buttons .btn {
-    animation: fadeIn 1.5s forwards;
-    animation-delay: 1.5s;
-}
 
 /* Fade-In Keyframes for Buttons */
 @keyframes fadeIn {
@@ -486,34 +449,66 @@ section:hover {
 .footer a{
     text-decoration: none;
     color: #007bff;
-    border-bottom: 0.1px solid#007bff;
+  
 
 }
 
 
-/* Media Queries */
 @media (max-width: 768px) {
+    /* Stack buttons vertically with proper spacing */
     .home-buttons {
         display: flex;
         flex-direction: column;
-
+        align-items: center; /* Center-align the buttons */
+        gap: 15px; /* Add spacing between buttons */
+        margin-top: 40px; /* Adjust the top margin for better spacing */
     }
-    #about{
-        margin-top: 80px;
+
+    /* Ensure the About section has proper margin and alignment */
+    #about {
+        margin-top: 100px; /* Increased margin for better separation from other sections */
+        padding: 0 20px; /* Add some padding to avoid text touching the edges */
+    }
+
+    /* Reduce font sizes slightly for better readability on smaller screens */
+    #about h2 {
+        font-size: 2.5rem;
+    }
+
+    #about p {
+        font-size: 1.1rem;
     }
     
+    /* Profile Picture Adjustment for Smaller Screens */
+    .profile-pic {
+        width: 150px; /* Adjust width for smaller screens */
+        height: 150px; /* Adjust height for a consistent circle */
+    }
+
+    /* Adjust home section title for smaller screens */
+    #home h1 {
+        font-size: 3.5rem; /* Decrease font size for better fit */
+    }
+
+    /* Reduce the margin to align text properly */
+    #home p {
+        font-size: 1.2rem; /* Slightly smaller paragraph text */
+        margin-top: 20px; /* Adjust margin to separate text from buttons */
+    }
 }
+
 @media (max-width: 426px) {
     .home {
         display: flex;
         flex-direction: column;
         padding-top: 100px;
+        padding-bottom: 200px;
     }
     .home h1{
         font-size:4.5rem;
     }
     #about {
-        margin-top: 190px;
+        margin-top: 170px;
     }
     #connect-me{
         margin-bottom: 30px;
