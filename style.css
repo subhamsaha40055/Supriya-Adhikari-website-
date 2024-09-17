@@ -14,7 +14,7 @@ body {
 
 /* Home Section */
 #home {
-    height: 125vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,14 +31,14 @@ body {
 
 .profile-pic {
     border-radius: 50%;
-    width: 200px; /* Adjust size as needed */
-    height: 200px; /* Same as width for a perfect circle */
+    width: 300px; /* Adjust size as needed */
+    height: 300px; /* Same as width for a perfect circle */
     object-fit: cover; /* Ensure image covers the circle properly */
     margin-bottom: 20px;
     border: 5px solid #fff; /* White thin border */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
     animation: glow 1.5s infinite alternate, scaleUp 3s infinite alternate; /* Add animations */
-    margin-top: 200px;
+    
 }
 
 /* Glowing Effect */
@@ -461,12 +461,12 @@ section:hover {
         flex-direction: column;
         align-items: center; /* Center-align the buttons */
         gap: 15px; /* Add spacing between buttons */
-        margin-top: 40px; /* Adjust the top margin for better spacing */
+        /* Adjust the top margin for better spacing */
     }
 
     /* Ensure the About section has proper margin and alignment */
     #about {
-        margin-top: 100px; /* Increased margin for better separation from other sections */
+        margin-top: 80px; /* Increased margin for better separation from other sections */
         padding: 0 20px; /* Add some padding to avoid text touching the edges */
     }
 
@@ -481,8 +481,8 @@ section:hover {
     
     /* Profile Picture Adjustment for Smaller Screens */
     .profile-pic {
-        width: 150px; /* Adjust width for smaller screens */
-        height: 150px; /* Adjust height for a consistent circle */
+        width: 200px; /* Adjust width for smaller screens */
+        height: 200px; /* Adjust height for a consistent circle */
     }
 
     /* Adjust home section title for smaller screens */
